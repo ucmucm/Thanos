@@ -1,5 +1,6 @@
 package mn.ooo.thanos.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -10,6 +11,7 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "UserInfo")
+@Builder
 public class UserInfo {
 
     public enum Gender {

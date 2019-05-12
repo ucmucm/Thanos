@@ -7,7 +7,7 @@ import mn.ooo.thanos.services.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -17,8 +17,22 @@ public class UserInfoServiceImpl implements UserInfoService {
     private UserInfoRepository userInfoRepository;
 
     @Override
-    public boolean findByUsername(final String username){
-        final List<UserInfo> list = userInfoRepository.findByUsername(username);
-        return list.isEmpty() ? false : true;
+    public Optional<UserInfo> findByUsername(final String username) {
+        return userInfoRepository.findByUsername(username);
+    }
+
+    @Override
+    public Optional<UserInfo> findByEmailAddress(final String emailAddress) {
+        return userInfoRepository.findByEmailAddress(emailAddress);
+    }
+
+    @Override
+    public String findPasswordByEmailAddress(final String emailAddress) {
+        return userInfoRepository.findPasswordByEmailAddress(emailAddress);
+    }
+
+    @Override
+    public void save(final UserInfo userInfo) {
+        userInfoRepository.save(userInfo);
     }
 }

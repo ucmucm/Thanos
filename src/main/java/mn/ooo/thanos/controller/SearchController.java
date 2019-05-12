@@ -27,7 +27,7 @@ public class SearchController {
 
     @RequestMapping(value = SEARCH, method = RequestMethod.GET)
     public ModelAndView execute(@RequestParam(value = "username") final String username) {
-        if (searchHelper.hasUser(username)) {
+        if (searchHelper.hasUserByUsername(username)) {
             return userHomepage(username);
         } else {
             return newUserPage(username);

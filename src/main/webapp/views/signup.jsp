@@ -11,25 +11,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-6">
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="/signup/add" method="get">
                 <span class="heading">用户注册</span>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="电子邮件">
-                    <i class="fa fa-user"></i>
+                    <input type="email" class="form-control" name="emailAddress" placeholder="电子邮件" required="true">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="username" placeholder="用户名">
-                    <i class="fa fa-user"></i>
+                    <input type="text" class="form-control" name="username" placeholder="用户名" required="true">
                 </div>
                 <div class="form-group help">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="密码">
-                    <i class="fa fa-lock"></i>
-                    <a href="#" class="fa fa-question-circle"></a>
-                </div>
-                <div class="form-group help">
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="确认密码">
-                    <i class="fa fa-lock"></i>
-                    <a href="#" class="fa fa-question-circle"></a>
+                    <input type="password" class="form-control" name="password" placeholder="密码" required="true">
                 </div>
                 <div class="form-group">
                     <div class="main-checkbox">
