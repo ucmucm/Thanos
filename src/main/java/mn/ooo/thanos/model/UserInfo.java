@@ -2,12 +2,20 @@ package mn.ooo.thanos.model;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 @Data
+@Entity
+@Table(name = "UserInfo")
 public class UserInfo {
 
     public enum Gender {
         Male("Male"),
-        Female("Female");
+        Female("Female"),
+        Unknown("Unknown");
 
         private final String name;
 
@@ -17,7 +25,11 @@ public class UserInfo {
 
     }
 
-    private String userName;
+    @Id
+    @GeneratedValue
+    private int userId;
+
+    private String username;
     private int age;
 
 }
