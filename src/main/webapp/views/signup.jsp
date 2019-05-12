@@ -2,74 +2,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login V16</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="../css/login/images/icons/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="../css/login/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/login/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="../css/login/vendor/css-hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/login/vendor/animsition/css/animsition.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/login/vendor/select2/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/login/vendor/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" type="text/css" href="../css/login/css/util.css">
-    <link rel="stylesheet" type="text/css" href="../css/login/css/main.css">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/login/style.css">
 </head>
 <body>
 
-<div class="limiter">
-    <div class="container-login100" style="background-image: url('../css/login/images/bg-01.jpg');">
-        <div class="wrap-login100 p-t-30 p-b-50">
-				<span class="login100-form-title p-b-41">
-					Account Login
-				</span>
-            <form class="login100-form validate-form p-b-33 p-t-5">
-
-                <div class="wrap-input100 validate-input" data-validate = "Enter username">
-                    <input class="input100" type="text" name="username" placeholder="User name">
-                    <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <form class="form-horizontal">
+                <span class="heading">用户注册</span>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="电子邮件">
+                    <i class="fa fa-user"></i>
                 </div>
-
-                <div class="wrap-input100 validate-input" data-validate = "Enter email">
-                    <input class="input100" type="text" name="email" placeholder="Email address">
-                    <span class="focus-input100" data-placeholder="&#xE715;"></span>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="用户名">
+                    <i class="fa fa-user"></i>
                 </div>
-
-                <div class="wrap-input100 validate-input" data-validate="Enter password">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
-                    <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+                <div class="form-group help">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="密码">
+                    <i class="fa fa-lock"></i>
+                    <a href="#" class="fa fa-question-circle"></a>
                 </div>
-
-                <div class="wrap-input100 validate-input" data-validate = "Enter password">
-                    <input class="input100" type="password" name="pass" placeholder="Confirm password">
-                    <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+                <div class="form-group help">
+                    <input type="password" class="form-control" id="inputPassword2" placeholder="确认密码">
+                    <i class="fa fa-lock"></i>
+                    <a href="#" class="fa fa-question-circle"></a>
                 </div>
-
-                <div class="container-login100-form-btn m-t-32">
-                    <button class="login100-form-btn">
-                        Sign up
-                    </button>
+                <div class="form-group">
+                    <div class="main-checkbox">
+                        <input type="checkbox" value="None" id="checkbox1" name="check"/>
+                        <label for="checkbox1"></label>
+                    </div>
+                    <span class="text">记住我</span>
+                    <button type="submit" class="btn btn-default">立刻注册</button>
                 </div>
-
             </form>
         </div>
     </div>
 </div>
-
-
-<div id="dropDownSelect1"></div>
-
-<script src="../css/login/vendor/jquery/jquery-3.2.1.min.js"></script>
-<script src="../css/login/vendor/animsition/js/animsition.min.js"></script>
-<script src="../css/login/vendor/bootstrap/js/popper.js"></script>
-<script src="../css/login/vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="../css/login/vendor/select2/select2.min.js"></script>
-<script src="../css/login/vendor/daterangepicker/moment.min.js"></script>
-<script src="../css/login/vendor/daterangepicker/daterangepicker.js"></script>
-<script src="../css/login/vendor/countdowntime/countdowntime.js"></script>
-<script src="../css/login/js/main.js"></script>
 
 </body>
 </html>
