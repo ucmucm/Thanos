@@ -29,6 +29,8 @@ public class UserInfo {
     @GeneratedValue
     private int userId;
 
+    private String emailAddress;
+    private String password;
     private String username;
     private int age;
 

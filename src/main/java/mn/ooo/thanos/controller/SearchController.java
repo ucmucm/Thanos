@@ -9,16 +9,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import static mn.ooo.thanos.helper.Constant.*;
+
 @RestController
 @RequiredArgsConstructor
 public class SearchController {
 
     @Autowired
     private SearchHelper searchHelper;
-
-    private static final String SEARCH = "/search";
-    private static final String INDEX = "index";
-    private static final String SEARCH_RESULT = "searchResult";
 
     @RequestMapping(value = "/")
     public ModelAndView homePage() {
@@ -28,7 +26,7 @@ public class SearchController {
     }
 
     @RequestMapping(value = SEARCH, method = RequestMethod.GET)
-    public ModelAndView execute(@RequestParam("username") final String username) {
+    public ModelAndView execute(@RequestParam(value = "username") final String username) {
         if (searchHelper.hasUser(username)) {
             return userHomepage(username);
         } else {
@@ -37,10 +35,13 @@ public class SearchController {
     }
 
     private ModelAndView userHomepage(final String username) {
+        final ModelAndView view = new ModelAndView();
+        view.addObject("username", username);
         return new ModelAndView();
     }
 
-    private ModelAndView newUserPage(final String userName) {
-        return new ModelAndView(SEARCH_RESULT);
+    private ModelAndView newUserPage(final String username) {
+        final ModelAndView view = new ModelAndView();
+        return new ModelAndView(REDIRECT + SIGN_UP + "?username=" + username);
     }
 }
