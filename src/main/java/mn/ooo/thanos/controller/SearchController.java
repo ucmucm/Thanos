@@ -28,8 +28,10 @@ public class SearchController {
     @RequestMapping(value = SEARCH, method = RequestMethod.GET)
     public ModelAndView execute(@RequestParam(value = "username") final String username) {
         if (searchHelper.hasUserByUsername(username)) {
+            System.out.println("1");
             return userHomepage(username);
         } else {
+            System.out.println("2");
             return newUserPage(username);
         }
     }
@@ -37,7 +39,7 @@ public class SearchController {
     private ModelAndView userHomepage(final String username) {
         final ModelAndView view = new ModelAndView();
         view.addObject("username", username);
-        return new ModelAndView();
+        return new ModelAndView("searchResult");
     }
 
     private ModelAndView newUserPage(final String username) {

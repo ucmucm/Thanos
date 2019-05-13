@@ -32,4 +32,6 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.2'
 }
