@@ -10,4 +10,5 @@ public interface UserInfoService {
     Optional<UserInfo> findByEmailAddress(final String emailAddress);
     String findPasswordByEmailAddress(final String emailAddress);
     void save(final UserInfo userInfo);
+
 }
