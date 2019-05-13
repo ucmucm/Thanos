@@ -1,4 +1,4 @@
-package mn.ooo.thanos.helper;
+package mn.ooo.thanos.utils;
 
 import lombok.RequiredArgsConstructor;
 import mn.ooo.thanos.model.UserInfo;
@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
-public class SearchHelper {
+public class SearchUtil {
 
     @Autowired
     private UserInfoService userInfoService;

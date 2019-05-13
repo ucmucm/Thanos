@@ -4,7 +4,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import static mn.ooo.thanos.helper.Constant.*;
+import static mn.ooo.thanos.utils.Constant.ARTICLE;
+import static mn.ooo.thanos.utils.Constant.EDIT;
+import static mn.ooo.thanos.utils.Constant.VIEW;
 
 @RestController
 public class ArticleController {

@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import static mn.ooo.thanos.helper.Constant.*;
+import static mn.ooo.thanos.utils.Constant.ADD;
+import static mn.ooo.thanos.utils.Constant.EMAIL_ADDRESS;
+import static mn.ooo.thanos.utils.Constant.PASSWORD;
+import static mn.ooo.thanos.utils.Constant.SIGN_UP;
+import static mn.ooo.thanos.utils.Constant.USERNAME;
 
 @RestController
 @RequiredArgsConstructor

@@ -1,4 +1,4 @@
-package mn.ooo.thanos.helper;
+package mn.ooo.thanos.utils;
 
 public class Constant {
 

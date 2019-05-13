@@ -1,7 +1,7 @@
 package mn.ooo.thanos.controller;
 
 import lombok.RequiredArgsConstructor;
-import mn.ooo.thanos.helper.SearchHelper;
+import mn.ooo.thanos.utils.SearchUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,14 +9,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import static mn.ooo.thanos.helper.Constant.*;
+import static mn.ooo.thanos.utils.Constant.INDEX;
+import static mn.ooo.thanos.utils.Constant.REDIRECT;
+import static mn.ooo.thanos.utils.Constant.SEARCH;
+import static mn.ooo.thanos.utils.Constant.SIGN_UP;
 
 @RestController
 @RequiredArgsConstructor
 public class SearchController {
 
     @Autowired
-    private SearchHelper searchHelper;
+    private SearchUtil searchUtil;
 
     @RequestMapping(value = "/")
     public ModelAndView homePage() {
@@ -27,7 +30,7 @@ public class SearchController {
 
     @RequestMapping(value = SEARCH, method = RequestMethod.GET)
     public ModelAndView execute(@RequestParam(value = "username") final String username) {
-        if (searchHelper.hasUserByUsername(username)) {
+        if (searchUtil.hasUserByUsername(username)) {
             System.out.println("1");
             return userHomepage(username);
         } else {
