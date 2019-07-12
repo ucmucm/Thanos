@@ -16,7 +16,11 @@
 
 <div class="row">
     <div class="col-md-3"></div>
-    <div class="col-md-6">Article edit page</div>
+    <div class="col-md-6">
+        <input type="text" class="edit-title"/>
+
+
+    </div>
     <div class="col-md-3"></div>
 </div>
 

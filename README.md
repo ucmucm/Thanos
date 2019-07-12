@@ -27,5 +27,5 @@ CREATE TABLE Avengers.article_info (
     article_updated_date DATE,
     user_id INT,
     FOREIGN KEY (user_id) REFERENCES user_info(user_id)
-)
+);
 ```
